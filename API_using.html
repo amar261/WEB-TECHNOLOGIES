@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .center{
+            margin:auto;
+            width: 200px;
+            padding: 100px;
+        }
+        .seccenter{
+            margin: auto;
+            width: 300px;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+   
+    <section class="seccenter">
+        <h1>what your name says about personality?</h1>
+        <div class="center">
+            <div class="details">
+                <label><h1>Enter your name</h1></label><br>
+                <input type="text" name="" id="nameid">
+                        </div>
+                        <div class="image">
+                            <img src="personality.jpg" width="200" height="200" class="imgchange">
+                        </div>
+                        <button>click here</button>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                const name = $('#nameid').val();
+                alert(name);
+                $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+                const b =$('.imgchange');
+                console.log(b);
+            });
+        });
+    </script>
+</body>
+</html>
